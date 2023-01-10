@@ -95,6 +95,8 @@
 				
 				let html = "";
 				
+				let sum = ${sum + delivery };
+				
 				$.each(data, function(index, item){
 					
 					html += "<div class='delivery_info'>"
@@ -117,6 +119,14 @@
 					html += "<div class='point'>사용 가능한 포인트: "+${point }+"</div></div></div>"
 				
 				});
+				
+				$(".bill_point").empty();
+				
+				$(".bill_footer_price").empty();
+				
+				$(".bill_point").append("0원");
+				
+				$(".bill_footer_price").append(sum.toLocaleString('ko-KR') +"원");
 				
 				$(".content_delivery_wrap").append(html);
 				
